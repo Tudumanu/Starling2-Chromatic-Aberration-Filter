@@ -10,13 +10,15 @@ filter1.intensity = 20;
 mySprite.filter = filter1;
 ```
 
-Creator: yloquen
-Modified for Starling 2 by: Ger
+**Creator** (Starling1): yloquen
+
+**Modified by** (Starling 2): Ger
 
 For demo.swf see links on REAME:
 https://github.com/yloquen/StarlingFilters/
 
-Other info:
+### Other info:
+
 https://forum.starling-framework.org/topic/how-to-update-a-very-modern-cool-filter
 
 https://forum.starling-framework.org/topic/2-filters-for-starling
