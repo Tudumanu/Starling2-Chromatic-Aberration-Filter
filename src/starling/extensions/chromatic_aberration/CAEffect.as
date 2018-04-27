@@ -9,13 +9,13 @@ package starling.extensions.chromatic_aberration
 	public class CAEffect extends FilterEffect
 	{
 	 
-		private var constants:Vector.<Number>;
+		private var _constants:Vector.<Number>;
 		private var _intensity:Number;
 		private var _angle:Number;
 	 
 		public function CAEffect()
 		{
-			 constants = new Vector.<Number>(4, true);
+			 _constants = new Vector.<Number>(4, true);
 			 _intensity = 0;
 			 _angle = 0;
 		}
@@ -38,33 +38,30 @@ package starling.extensions.chromatic_aberration
 	 
 		override protected function beforeDraw(context:Context3D):void
 		{
-			context.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT, 0, constants, int(constants.length / 4));
+			context.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT, 0, _constants, int(_constants.length / 4));
 			super.beforeDraw(context);
 		}
 	 
 		private function doMagic():void
 		{
-			var x:Number = _intensity*Math.cos(_angle);
-			var y:Number = -_intensity*Math.sin(_angle);
+			var x:Number = _intensity * Math.cos(_angle);
+			var y:Number = _intensity * Math.sin(_angle);
 	 
-				constants[0] = x;
-				constants[1] = y;
-				constants[2] = -x;
-				constants[3] = -y;
+				_constants[0] = x;
+				_constants[1] = y;
+				_constants[2] = -x;
+				_constants[3] = -y;
 		}
 	 
-		public function get intensity():Number { return _intensity; }
+		public function get intensity():Number { return _intensity * 1000; }
 	 
 		public function set intensity(value:Number):void
 		{
-			_intensity = value/1000;
+			_intensity = value / 1000;
 			doMagic();
 		}
 	 
-		public function get angle():Number
-			{
-				return _angle;
-			}
+		public function get angle():Number { return _angle; }
 	 
 		public function set angle(value:Number):void
 		{

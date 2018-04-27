@@ -10,12 +10,16 @@ filter1.intensity = 20;
 mySprite.filter = filter1;
 ```
 
-**Creator** (Starling1): yloquen
 
-**Modified by** (Starling 2): Ger
+**Creator Starling 1.x**: yloquen - https://github.com/yloquen/StarlingFilters/
 
-For demo.swf see links on REAME:
-https://github.com/yloquen/StarlingFilters/
+**Modified for Starling 2.x**: Ger
+
+
+### Demo (Starling Extensions page):
+
+http://wiki.starling-framework.org/extensions/chromatic-aberration
+
 
 ### Other info:
 
