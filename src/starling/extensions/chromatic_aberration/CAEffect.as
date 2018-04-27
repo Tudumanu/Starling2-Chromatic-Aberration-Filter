@@ -6,7 +6,7 @@ package starling.extensions.chromatic_aberration
 	import starling.rendering.FilterEffect;
 	import starling.rendering.Program;
 	 
-	public class CAEffect extends FilterEffect
+	internal class CAEffect extends FilterEffect
 	{
 	 
 		private var _constants:Vector.<Number>;
